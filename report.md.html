@@ -1,0 +1,69 @@
+Name: Pratik Patel
+U-ID: 118397054, pratik94
+
+This is the report for assignment-3 for CMSC848F. 
+
+
+1. Differentiable Volume Rendering
+
+1.3. Ray sampling (10 points)
+
+a. get_pixels_from_image in ray_utils.py: Generated 2d grid and normalized it around 0. 
+b. get_rays_from_pixels in ray_utils.py: Generated rays from camera origin to the pixel.
+
+Results:
+
+![Problem 1.3_1](images/prob1.3_grid.png)
+![Problem 1.3_2](images/prob1.3_rays.png)
+
+1.4. Point sampling (10 points)
+
+Next task is to fill out StratifiedSampler in sampler.py. Implement the forward method.
+
+Results:
+
+![Problem 1.4](images/raypoints_0_points.png)
+
+1.5. Volume rendering (30 points)
+
+
+
+a. VolumeRenderer._compute_weights and
+b. VolumeRenderer._aggregate.
+c. You will also modify the VolumeRenderer.forward method to render a depth map in addition to color from a volume
+
+Result:
+
+<figure style="text-align: center;">
+    <img src="images/part_1.gif" alt="Volumetric Rendering" />
+    <figcaption>Problem 1.5 Volume rendering</figcaption>
+</figure>
+
+
+
+2. Optimizing a basic implicit volume
+
+
+2.1. Random ray sampling (5 points)
+Random subsampling of pixel coordinaters.
+
+2.2. Loss and training (5 points)
+Implemented MSE loss: loss = MSE_loss(out['feature'], rgb_gt)
+
+Results:
+
+<figure style="text-align: center;">
+    <img src="images/part_2.gif" alt="Optimization result" />
+    <figcaption>Problem 2 Optimization results</figcaption>
+</figure>
+
+
+3. Optimizing a Neural Radiance Field (NeRF) (30 points)
+
+<figure style="text-align: center;">
+    <img src="images/part_3.gif" alt="NeRF" />
+    <figcaption>Problem 3: NeRF results</figcaption>
+</figure>
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
